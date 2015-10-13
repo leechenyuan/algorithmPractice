@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23223708-f638-4816-84c0-fdeebeae4cf9" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\.gitconfig" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\datastruct\queue\MaxHeap.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\datastruct\queue\MaxQueue.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\datastruct\queue\PriorityQueue.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\datastruct\queue\TestCase.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\ISorter.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\MergeSort.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\MergeSort_V2.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\QuickSort.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\SortTester.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\Sorter.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\TimeCounter.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\main\java\me\leechenyuan\practice\algorithms\sort\best\BestQuickSort.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\homework\algorithm\repository\algorithmPractice\src\test\java\TestGenericInterface.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="algorithmPractice.iws" />
     <ignored path=".idea/workspace.xml" />
