@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            'com.google.code.gson:gson:2.3.1'
+            ,'joda-time:joda-time:2.7'
+            ,'junit:junit:4.12'
+            ,'com.google.guava:guava:18.0'
+
+    )
+}
+
+//使用utf-8编码格式编译java
+tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
