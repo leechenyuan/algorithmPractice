@@ -8,6 +8,7 @@ public class Node<K extends Comparable,V> {
     private V value ;
     private Node left;
     private Node right;
+    private int size;
     public Node(K key,V value,Node left,Node right) {
         this.key = key ;
         this.value = value ;
@@ -45,5 +46,13 @@ public class Node<K extends Comparable,V> {
 
     public void setRight(Node right) {
         this.right = right;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }
