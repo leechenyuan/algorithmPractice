@@ -1,5 +1,7 @@
-package me.leechenyuan.practice.algorithms.find.v1;
+package me.leechenyuan.practice.test.algorithms;
 
+import me.leechenyuan.practice.algorithms.find.v1.BinarySearchTree;
+import me.leechenyuan.practice.algorithms.find.v1.SymbolTable;
 import org.junit.Test;
 
 /**
