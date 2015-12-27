@@ -8,7 +8,7 @@ import me.leechenyuan.practice.algorithms.sort.ISorter;
 import me.leechenyuan.practice.algorithms.sort.SortTester;
 import org.junit.Test;
 /**
- *  这是我见过的最简洁的快排算法
+ *  ?????????????????????jjjjjdd
  */
 public class BestQuickSort implements ISorter{
     @Override
@@ -21,7 +21,7 @@ public class BestQuickSort implements ISorter{
 
         int pivotIndex = partritionn(arr,left,right);
         quickSort(arr, left, pivotIndex - 1);
-        quickSort(arr, pivotIndex, right); //不是 index + 1,因为index实际上并不是最初我们选择的pivot的坐标
+        quickSort(arr, pivotIndex, right); //???? index + 1,???index?????????????????????pivot??????
     }
 
     public static int partritionn(int [] arr,int left,int right){

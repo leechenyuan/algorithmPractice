@@ -9,7 +9,7 @@ public class MaxHeap<T extends Comparable<T> > implements MaxQueue<T>{
     final static int HEAD_INDEX = 1 ;
     final static int DEFAULT_INTI_SIZE  = 16 ;
     T [] heapArray;
-    int currentSize  = 0 ;
+    int tailf  = 1 ; //最后一个元素的索引+1 ,相当于范围里面的 end
 
 //    public MaxHeap(T [] arr,int size){
 //        heapArray =(T [])new  Comparable<T> [currentSize]; //TODO 这句话为什么不行？
@@ -20,17 +20,18 @@ public class MaxHeap<T extends Comparable<T> > implements MaxQueue<T>{
         heapArray = (T [])new  Comparable [DEFAULT_INTI_SIZE];
     }
     public MaxHeap(int size){
-        heapArray =(T [])new  Comparable [size];
+//        heapArray =(T [])new  Comparable [size]; // 别忘记了 heapArray[0] 是保留位置...
+        heapArray =(T [])new  Comparable [size + 1];
     }
     @Override
     public void insert(T t) {
-        if(currentSize >= heapArray.length){
+        if(tailf >= heapArray.length){
             // 数组扩容
             heapArray = Arrays.copyOf(heapArray,heapArray.length * 2);
         }
-        heapArray[currentSize] = t ;
-        swim(currentSize);
-        currentSize ++ ;
+        heapArray[tailf++] = t ;
+
+        swim(tailf - 1 );
     }
 
     @Override
@@ -44,20 +45,20 @@ public class MaxHeap<T extends Comparable<T> > implements MaxQueue<T>{
         /**
          *  TODO 为什么将最后的元素放到堆的顶部，然后再下沉 ？
          */
-        swap(currentSize-1,HEAD_INDEX);
+        swap(tailf - 1,HEAD_INDEX);
         sink(HEAD_INDEX);
-        currentSize -- ; // 很容易漏掉这个.....
+        tailf -- ; // 很容易漏掉这个.....
         return max;
     }
 
     @Override
     public boolean isEmpty() {
-        return currentSize == 0;
+        return tailf == 1;
     }
 
     @Override
     public int size() {
-        return currentSize;
+        return tailf - 1;
     }
 
     /**
@@ -93,7 +94,7 @@ public class MaxHeap<T extends Comparable<T> > implements MaxQueue<T>{
 
     private boolean hasChild(int index){
 //        return currentSize >= (index << 1); 不是 >= 而是 >
-        return currentSize > (index << 1);
+        return tailf > (index << 1);
     }
 
     private boolean lessThan(int aIndex,int bIndex){
