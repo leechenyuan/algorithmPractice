@@ -58,8 +58,13 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
 
     @Override
     public void remove(K key) {
-        root = remove(root,key);
+
     }
+
+//    @Override
+//    public void remove(Node<K, V> root, K key) {
+//        this.root = remove(this.root,key);
+//    }
 
 //    public Node<K,V> remove(Node<K,V> node,K k){
 //        if(root == null){
@@ -82,15 +87,21 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
 //        return right;
 //    }
 //
-//    private Node<K,V> deleteMin(Node<K,V> node){
-//        if(node == null || node.getLeft() == null){
-//            return null;
-//        }
-//        Node<K,V> left = deleteMax(node.getLeft());
-//        node.setRight(left);
-//
-//        return left;
-//    }
+    public void deleteMin(){
+        root = deleteMin(root);
+    }
+    private Node<K,V> deleteMin(Node<K,V> node){
+        if(node == null ){
+            return null;
+        }
+        if(node.getLeft() == null){
+            return node.getRight();
+        }else{
+            Node<K,V> childNode = deleteMin(node.getLeft());
+            node.setLeft(childNode);
+            return node;
+        }
+    }
 
     @Override
     public int size() {

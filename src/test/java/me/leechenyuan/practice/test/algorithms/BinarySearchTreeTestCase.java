@@ -18,7 +18,7 @@ public class BinarySearchTreeTestCase {
     private static Logger logger = LoggerFactory.getLogger(BinarySearchTreeTestCase.class);
     @Test
     public void t(){
-        SymbolTable<String,Integer> st = new BinarySearchTree<>();
+        BinarySearchTree<String,Integer> st = new BinarySearchTree<>();
         st.put("3",4);
         st.put("4",5);
         st.put("5",6);
@@ -26,13 +26,9 @@ public class BinarySearchTreeTestCase {
         System.out.println(st.get("3"));
         System.out.println(st.get("4"));
         System.out.println(st.get("5"));
-        System.out.println(st.get("A"));
-        st.put("A",9);
-        System.out.println(st.get("A"));
-        st.put("A",null);
-        System.out.println(st.get("A"));
-        logger.info("st size : " + st.size());
-        TreeMap<String,String> map = new TreeMap<>();
-    }
+       logger.info("st size : " + st.size());
 
+        st.deleteMin();
+        System.out.println(st.get("3"));
+    }
 }
