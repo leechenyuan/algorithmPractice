@@ -59,12 +59,13 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
     @Override
     public void remove(K key) {
         V value = get(key);
-        if(value != null){
-            root = remove(root,key);
-        }
+        root = remove(root,key);
     }
 
     public Node<K,V> remove(Node<K,V> node,K key){
+        if(node == null){
+            return null;
+        }
         if(node.getKey().compareTo(key)==0) {
             if(node.getLeft() == null){
                 return node.getRight();
