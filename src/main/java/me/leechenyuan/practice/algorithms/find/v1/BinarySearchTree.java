@@ -66,15 +66,17 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
 
     public Node<K,V> remove(Node<K,V> node,K key){
         if(node.getKey().compareTo(key)==0) {
-            if(node.getRight() != null){
-                Node<K,V> rNode = min(node.getRight());
-                node.setValue(rNode.getValue());
-                deleteMin(node.getRight());
-                return node;
-            }else{
+            if(node.getLeft() == null){
+                return node.getRight();
+            }
+            if(node.getRight() == null){
                 return node.getLeft();
             }
-        }else if(key.compareTo(node.getKey())<0){
+            Node minNode = min(node.getRight());
+            minNode.setLeft(node.getLeft());
+            minNode.setRight(deleteMin(node.getRight()));
+            return minNode;
+       }else if(key.compareTo(node.getKey())<0){
              node.setLeft(remove(node.getLeft(),key));
             return node;
         }else{
