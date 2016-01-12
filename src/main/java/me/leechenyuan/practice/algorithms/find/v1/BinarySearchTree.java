@@ -58,9 +58,30 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
 
     @Override
     public void remove(K key) {
-
+        V value = get(key);
+        if(value != null){
+            root = remove(root,key);
+        }
     }
 
+    public Node<K,V> remove(Node<K,V> node,K key){
+        if(node.getKey().compareTo(key)==0) {
+            if(node.getRight() != null){
+                Node<K,V> rNode = min(node.getRight());
+                node.setValue(rNode.getValue());
+                deleteMin(node.getRight());
+                return rNode;
+            }else{
+                return node.getLeft();
+            }
+        }else if(key.compareTo(node.getKey())<0){
+             node.setLeft(remove(node.getLeft(),key));
+            return node;
+        }else{
+            node.setRight(remove(node.getRight(),key));
+            return node ;
+        }
+    }
 //    @Override
 //    public void remove(Node<K, V> root, K key) {
 //        this.root = remove(this.root,key);
@@ -87,18 +108,69 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
 //        return right;
 //    }
 //
+
     public void deleteMin(){
-        root = deleteMin(root);
+        if(root!=null){
+            root = deleteMin(root);
+        }
     }
     private Node<K,V> deleteMin(Node<K,V> node){
-        if(node == null ){
-            return null;
-        }
+//        if(node == null ){
+//            return null;
+//        }
         if(node.getLeft() == null){
             return node.getRight();
         }else{
             Node<K,V> childNode = deleteMin(node.getLeft());
             node.setLeft(childNode);
+            return node;
+        }
+    }
+    public void deleteMax(){
+        if(root!=null){
+            root = deleteMax(root);
+        }
+    }
+    public Node<K,V> deleteMax(Node<K,V> node){
+        if(node.getRight() == null){
+            return node.getLeft();
+        }else{
+            Node<K,V> rNode = deleteMax(node.getRight());
+            node.setRight(rNode);
+            return node;
+        }
+    }
+
+    public K max(){
+        Node<K,V> max = max(root);
+        if(max != null){
+            return max.getKey();
+        }
+        return null;
+    }
+    public K min(){
+        Node<K,V> min = min(root);
+        if(min != null){
+            return min.getKey();
+        }
+        return null;
+    }
+    public Node<K,V> min(Node<K,V> node){
+        if(node == null){
+            return null;
+        }else if(node.getLeft()!=null){
+            return min(node.getLeft());
+        }else{
+            return node;
+        }
+    }
+
+    public Node<K,V> max(Node<K,V> node) {
+        if(node == null){
+            return node;
+        }else if(node.getRight() !=null){
+            return max(node.getRight());
+        }else{
             return node;
         }
     }

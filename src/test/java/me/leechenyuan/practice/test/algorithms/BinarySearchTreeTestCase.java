@@ -19,16 +19,29 @@ public class BinarySearchTreeTestCase {
     @Test
     public void t(){
         BinarySearchTree<String,Integer> st = new BinarySearchTree<>();
-        st.put("3",4);
-        st.put("4",5);
+        st.put("3",3);
+        st.put("4",4);
+        st.put("5",5);
         st.put("5",6);
-        st.put("5",7);
         System.out.println(st.get("3"));
         System.out.println(st.get("4"));
         System.out.println(st.get("5"));
        logger.info("st size : " + st.size());
 
+        logger.info("max " + st.max());
+        logger.info("min " + st.min());
         st.deleteMin();
+        st.deleteMax();
+        System.out.println(st.get("3"));
+        logger.info("st size : " + st.size());
+        System.out.println(st.get("5"));
+        System.out.println(st.get("4"));
+            st.remove("4");
+        System.out.println(st.get("4"));
+        logger.info("st size : " + st.size());
+        st.put("3",3);
+        st.put("4",4);
+        logger.info("st size : " + st.size());
         System.out.println(st.get("3"));
     }
 }
