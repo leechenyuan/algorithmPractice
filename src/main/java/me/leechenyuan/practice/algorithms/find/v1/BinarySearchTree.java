@@ -72,7 +72,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
             if(node.getRight() == null){
                 return node.getLeft();
             }
-            Node minNode = min(node.getRight());
+            Node minNode = min(node.getRight()); //
             minNode.setLeft(node.getLeft());
             minNode.setRight(deleteMin(node.getRight()));
             return minNode;
@@ -112,14 +112,12 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
 //
 
     public void deleteMin(){
-        if(root!=null){
-            root = deleteMin(root);
-        }
+        root = deleteMin(root);
     }
     private Node<K,V> deleteMin(Node<K,V> node){
-//        if(node == null ){
-//            return null;
-//        }
+        if(node == null ){
+            return null;
+        }
         if(node.getLeft() == null){
             return node.getRight();
         }else{
@@ -129,11 +127,12 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
         }
     }
     public void deleteMax(){
-        if(root!=null){
-            root = deleteMax(root);
-        }
+        root = deleteMax(root);
     }
     public Node<K,V> deleteMax(Node<K,V> node){
+        if(node == null){
+            return null;
+        }
         if(node.getRight() == null){
             return node.getLeft();
         }else{
