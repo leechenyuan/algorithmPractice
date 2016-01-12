@@ -70,7 +70,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements SymbolTable
                 Node<K,V> rNode = min(node.getRight());
                 node.setValue(rNode.getValue());
                 deleteMin(node.getRight());
-                return rNode;
+                return node;
             }else{
                 return node.getLeft();
             }
