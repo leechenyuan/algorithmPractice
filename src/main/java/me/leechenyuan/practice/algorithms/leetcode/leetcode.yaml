@@ -1,0 +1,44 @@
+"24. Swap Nodes in Pairs":
+    "nextChallenge":
+        - "25. Reverse Nodes in k-Group":
+            "next challenge":
+                - "86. Partition List":
+                    "tag":
+                        - "linkedlist , two pointers"
+                    "next challenge":
+                        - "plus-one-linked-list"
+                        - "max-consecutive-ones-ii"
+                        - "k-diff-pairs-in-an-array"
+                - "147. Insertion Sort List"
+                    "next chalenge":
+                        - "138. Copy List with Random Pointer":
+                            "tags" :
+                                - "hashtable linkedlist"
+                            "next challenge":
+                                - "133. Clone Graph":
+                                    - "tags": "depth-first-search,breadth-first-search,graph"
+                        - "best-meeting-point"
+                        - "350. Intersection of Two Arrays II"
+                - "design-phone-directory"
+           "similar":
+                - "24. Swap Nodes in Pairs"
+"82. Remove Duplicates from Sorted List II":
+    "next challenge":
+        - "160. Intersection of Two Linked Lists":
+            "next challenge":
+                - "83. Remove Duplicates from Sorted List"
+                    "next challenge":
+                        - "237. Delete Node in a Linked List"
+                        - "328. Odd Even Linked List":
+                            "next challenge":
+                                - "142. Linked List Cycle II"
+                                - "237. Delete Node in a Linked List"
+                                - "445. Add Two Numbers II"
+                        - "445. Add Two Numbers II":
+                            -"next challenge":
+                                - "141. Linked List Cycle"
+                                - "237. Delete Node in a Linked List"
+                                - "design-phone-directory"
+                - "92. Reverse Linked List II"
+                - "234. Palindrome Linked List"
+
